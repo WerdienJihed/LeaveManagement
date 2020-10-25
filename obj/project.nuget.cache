@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "exLsUQx8sfalg7zTQ5ELPwvyD/B16c0LWnh75oCOYJdgJMJKmu/RrKYE0bORvOuVbgu5lNn+vE67T4KxtyGlZA==",
+  "dgSpecHash": "YdPjdhrIKiallDr81zwqkEUpNrx/YbWdGEE2YZmRJXF3ugYJJNtmD50eJ/gUMAmdyV+7LGWG8BnRSl+uPJfc2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\source\\repos\\Leave-management\\Leave-management\\Leave-management.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.9\\microsoft.entityframeworkcore.design.3.1.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.9\\microsoft.entityframeworkcore.relational.3.1.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.9\\microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.9\\microsoft.entityframeworkcore.tools.3.1.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.9\\microsoft.extensions.caching.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.9\\microsoft.extensions.caching.memory.3.1.9.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",

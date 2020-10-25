@@ -6,11 +6,13 @@ using AutoMapper;
 using Leave_management.Contracts;
 using Leave_management.Data;
 using Leave_management.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Leave_management.Controllers
 {
+	[Authorize( Roles = "Administrator")]
 	public class LeaveTypesController : Controller
 	{
 		private readonly ILeaveTypeRepository _repo; 
@@ -20,7 +22,7 @@ namespace Leave_management.Controllers
 			_repo = ropo;
 			_mapper = mapper;
 		}
-		// GET: LeaveTypesController
+
 		public ActionResult Index()
 		{
 			var leaveTypes = _repo.FindAll().ToList();
@@ -28,7 +30,6 @@ namespace Leave_management.Controllers
 			return View(model);
 		}
 
-		// GET: LeaveTypesController/Details/5
 		public ActionResult Details(int id)
 		{
 			if (!_repo.IsExists(id))
@@ -40,13 +41,13 @@ namespace Leave_management.Controllers
 			return View(leaveTypeViewModel);
 		}
 
-		// GET: LeaveTypesController/Create
+
 		public ActionResult Create()
 		{
 			return View();
 		}
 
-		// POST: LeaveTypesController/Create
+
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult Create(LeaveTypeViewModel leaveTypeViewModel)
@@ -76,7 +77,6 @@ namespace Leave_management.Controllers
 			}
 		}
 
-		// GET: LeaveTypesController/Edit/5
 		public ActionResult Edit(int id)
 		{
 			if (!_repo.IsExists(id))
@@ -89,7 +89,7 @@ namespace Leave_management.Controllers
 			return View(leaveTypeViewModel);
 		}
 
-		// POST: LeaveTypesController/Edit/5
+
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult Edit(LeaveTypeViewModel leaveTypeViewModel)
@@ -118,7 +118,6 @@ namespace Leave_management.Controllers
 			}
 		}
 
-		// GET: LeaveTypesController/Delete/5
 		public ActionResult Delete(int id)
 		{
 			if (!_repo.IsExists(id))
