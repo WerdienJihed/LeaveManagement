@@ -166,7 +166,6 @@ C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Create.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Details.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Edit.cshtml.g.cs
-C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Leave-management.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveTypes\Delete.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Leave-management.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Leave-management.MvcApplicationPartsAssemblyInfo.cs
@@ -209,3 +208,8 @@ C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\Index.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\ListEmployees.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Leave-management.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\Details.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\Edit.cshtml.g.cs
