@@ -213,3 +213,7 @@ C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Leave-management.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\Details.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveAllocation\Edit.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\Index.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\Create.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\Details.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\MyLeave.cshtml.g.cs

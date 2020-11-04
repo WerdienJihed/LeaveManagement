@@ -38,7 +38,7 @@ namespace Leave_management
 			// Add references for Repository and Contract to startup file
 
 			services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>(); 
-			services.AddScoped<ILeaveHistoryRepository, LeaveHistoryRepository>(); 
+			services.AddScoped<ILeaveRequestRepository, LeaveRequestsRepository>(); 
 			services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
 
 			services.AddAutoMapper(typeof(Maps)); 
