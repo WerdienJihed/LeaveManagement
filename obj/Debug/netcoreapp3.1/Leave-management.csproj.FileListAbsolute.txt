@@ -217,3 +217,4 @@ C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\Create.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\Details.cshtml.g.cs
 C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\LeaveRequest\MyLeave.cshtml.g.cs
+C:\Users\PC\source\repos\Leave-management\Leave-management\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AdminLTE.cshtml.g.cs
