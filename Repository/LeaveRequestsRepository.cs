@@ -68,5 +68,6 @@ namespace Leave_management.Repository
 			_db.LeaveRequests.Update(entity);
 			return await Save();
 		}
+		
 	}
 }

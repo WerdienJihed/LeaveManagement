@@ -15,29 +15,29 @@ namespace Leave_management.Controllers
 	[Authorize( Roles = "Administrator")]
 	public class LeaveTypesController : Controller
 	{
-		private readonly ILeaveTypeRepository _repo; 
+		private readonly IUnitOfWork _repo; 
 		private readonly IMapper _mapper;
-		public LeaveTypesController(ILeaveTypeRepository ropo , IMapper mapper)
+		public LeaveTypesController(IUnitOfWork repo , IMapper mapper)
 		{
-			_repo = ropo;
+			_repo = repo;
 			_mapper = mapper;
 		}
 
 		public async Task<ActionResult> Index()
 		{
-			var leaveTypes =  await _repo.FindAll();
+			var leaveTypes =  await _repo.LeaveTypes.FindAll();
 			var model = _mapper.Map<List<LeaveType>, List<LeaveTypeViewModel>>(leaveTypes.ToList());
 			return View(model);
 		}
 
 		public async Task<ActionResult> Details(int id)
 		{
-			var isExists = await _repo.IsExists(id);
+			var isExists = await _repo.LeaveTypes.IsExists(q=> q.Id == id);
 			if (isExists)
 			{
 				return NotFound(); 
 			}
-			var leaveType = await _repo.FindById(id);
+			var leaveType = await _repo.LeaveTypes.Find(q=>q.Id == id);
 			var leaveTypeViewModel = _mapper.Map<LeaveTypeViewModel>(leaveType);
 			return View(leaveTypeViewModel);
 		}
@@ -63,12 +63,8 @@ namespace Leave_management.Controllers
 				var leaveType = _mapper.Map<LeaveType>(leaveTypeViewModel);
 				leaveType.DateCreated = DateTime.Now;
 				
-				var isSucess = await _repo.Create(leaveType);
-				if (!isSucess)
-				{
-					ModelState.AddModelError("", "Something went wrong ... ");
-					return View(leaveTypeViewModel);
-				}
+				await _repo.LeaveTypes.Create(leaveType);
+				await _repo.Save();
 				return RedirectToAction(nameof(Index));
 			}
 			catch
@@ -80,12 +76,12 @@ namespace Leave_management.Controllers
 
 		public async Task<ActionResult> Edit(int id)
 		{
-			bool isExists = await _repo.IsExists(id);
+			bool isExists = await _repo.LeaveTypes.IsExists(q=>q.Id == id);
 			if (!isExists)
 			{
 				return NotFound();
 			}
-			var leaveType = await _repo.FindById(id);
+			var leaveType = await _repo.LeaveTypes.Find(q => q.Id == id);
 			var leaveTypeViewModel = _mapper.Map<LeaveTypeViewModel>(leaveType);
 
 			return View(leaveTypeViewModel);
@@ -105,12 +101,8 @@ namespace Leave_management.Controllers
 
 				var leaveType = _mapper.Map<LeaveType>(leaveTypeViewModel);
 
-				var isSucess = await _repo.Update(leaveType);
-				if (!isSucess)
-				{
-					ModelState.AddModelError("", "Something went wrong ... ");
-					return View(leaveTypeViewModel);
-				}
+				_repo.LeaveTypes.Update(leaveType);
+				await _repo.Save();
 				return RedirectToAction(nameof(Index));
 			}
 			catch
@@ -122,18 +114,40 @@ namespace Leave_management.Controllers
 
 		public async Task<ActionResult> Delete(int id)
 		{
-			bool isExists = await _repo.IsExists(id);
-			if (!isExists)
+			var leaveType = await _repo.LeaveTypes.Find(expression : q => q.Id == id);
+			if (leaveType == null)
 			{
 				return NotFound();
 			}
-			var leaveType = await _repo.FindById(id);
-			var isSuccess = await _repo.Delete(leaveType);
-			if (!isSuccess)
-			{
-				return BadRequest();
-			}
+			_repo.LeaveTypes.Delete(leaveType);
+			await _repo.Save();
 			return RedirectToAction(nameof(Index));
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<ActionResult> Delete(int id, LeaveTypeViewModel model)
+		{
+			try
+			{
+				var leaveType = await _repo.LeaveTypes.Find(expression: q => q.Id == id);
+				if (leaveType == null)
+				{
+					return NotFound();
+				}
+				_repo.LeaveTypes.Delete(leaveType);
+				await _repo.Save();
+				return RedirectToAction(nameof(Index));
+			}
+			catch (Exception)
+			{
+
+				return View(model);
+			}
+		}
+		protected override void Dispose(bool disposing)
+		{
+			_repo.Dispose();
+			base.Dispose(disposing);
 		}
 	}
 }
